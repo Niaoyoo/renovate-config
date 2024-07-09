@@ -1,0 +1,19 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "ignoreScripts": true,
+  "extends": [
+    "config:base",
+    "config:recommended",
+    ":semanticCommits",
+    ":semanticCommitScope(deps)",
+    ":semanticCommitTypeAll(chore)",
+    ":disablePeerDependencies",
+    "github>niaoyoo/renovate-config//presets/add-labels",
+    "github>niaoyoo/renovate-config//presets/github-actions",
+    "github>niaoyoo/renovate-config//presets/semantic-commits(npm)"
+  ],
+  "timezone": "Asia/Shanghai",
+  "prConcurrentLimit": 3,
+  "prHourlyLimit": 3,
+  "rangeStrategy": "bump"
+}

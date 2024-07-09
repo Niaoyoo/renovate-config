@@ -1,0 +1,26 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "preset to apply labels to renovate PRs",
+  "packageRules": [
+    {
+      "addLabels": ["renovate:digest"],
+      "description": "add labels - digest",
+      "matchUpdateTypes": ["digest"]
+    },
+    {
+      "addLabels": ["renovate:major"],
+      "description": "add labels - major",
+      "matchUpdateTypes": ["major"]
+    },
+    {
+      "addLabels": ["renovate:minor"],
+      "description": "add labels - minor",
+      "matchUpdateTypes": ["minor"]
+    },
+    {
+      "addLabels": ["renovate:patch"],
+      "description": "add labels - patch",
+      "matchUpdateTypes": ["patch"]
+    }
+  ]
+}

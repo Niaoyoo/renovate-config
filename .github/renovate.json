@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["github>niaoyoo/renovate-config"],
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies"],
+      "groupName": "devDependencies",
+      "excludePackageNames": ["typescript"],
+      "prPriority": 0
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@niaoyoo/renovate-config",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Presets for Open Source Libraries",
+  "license": "MIT",
+  "scripts": {
+    "test": "renovate-config-validator"
+  },
+  "devDependencies": {
+    "prettier": "3.2.4",
+    "renovate": "37.425.1"
+  }
+}
