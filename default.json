@@ -27,7 +27,7 @@
       ]
     },
     {
-      "groupName": "lint",
+      "groupName": "ESLint group",
       "matchPackageNames": [
         "eslint",
         "lint-staged",
