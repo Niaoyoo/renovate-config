@@ -5,10 +5,13 @@
   "description": "Presets for Open Source Libraries",
   "license": "MIT",
   "scripts": {
-    "test": "renovate-config-validator"
+    "test": "renovate-config-validator ./default.json"
   },
+  "files": [
+    "default.json"
+  ],
   "devDependencies": {
     "prettier": "3.2.4",
-    "renovate": "37.425.1"
+    "renovate": "^37.425.1"
   }
 }

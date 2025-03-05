@@ -1,19 +1,55 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "ignoreScripts": true,
   "extends": [
-    "config:base",
-    "config:recommended",
-    ":semanticCommits",
-    ":semanticCommitScope(deps)",
-    ":semanticCommitTypeAll(chore)",
-    ":disablePeerDependencies",
-    "github>niaoyoo/renovate-config//presets/add-labels",
-    "github>niaoyoo/renovate-config//presets/github-actions",
-    "github>niaoyoo/renovate-config//presets/semantic-commits(npm)"
+    "config:base"
   ],
+  "ignoreScripts": true,
+  "labels": ["dependencies", "renovate"],
   "timezone": "Asia/Shanghai",
-  "prConcurrentLimit": 3,
-  "prHourlyLimit": 3,
-  "rangeStrategy": "bump"
+  "prConcurrentLimit": 5,
+  "rangeStrategy": "bump",
+  "packageRules": [
+    {
+      "depTypeList": ["peerDependencies"],
+      "enabled": false
+    },
+    {
+      "groupName": "test",
+      "matchPackageNames": [
+        "ts-jest",
+        "@nestjs/testing"
+      ]
+    },
+    {
+      "groupName": "types",
+      "matchPackagePrefixes": [
+        "@types"
+      ]
+    },
+    {
+      "groupName": "lint",
+      "matchPackageNames": [
+        "eslint",
+        "lint-staged",
+        "@antfu/eslint-config"
+      ],
+      "matchPackagePrefixes": [
+        "eslint"
+      ]
+    }
+  ],
+  "ignoreDeps": [
+    "node",
+    "typescript",
+
+    "husky",
+    "rimraf",
+    "chalk",
+    "prompts",
+    "semver",
+    "execa"
+  ],
+  "postUpdateOptions": [
+    "pnpmDedupe"
+  ]
 }
