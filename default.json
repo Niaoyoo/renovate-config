@@ -36,6 +36,11 @@
       "matchPackagePrefixes": [
         "eslint"
       ]
+    },
+    {
+      "matchPackageNames": ["pnpm"],
+      "allowedVersions": "9.15.4",
+      "rangeStrategy": "pin"
     }
   ],
   "ignoreDeps": [
