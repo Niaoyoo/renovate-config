@@ -43,6 +43,11 @@
       "rangeStrategy": "pin"
     }
   ],
+  "ignorePaths": [
+    ".nvmrc",
+    ".node-version",
+    "packageManager"
+  ],
   "ignoreDeps": [
     "node",
     "typescript",
