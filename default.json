@@ -18,7 +18,8 @@
       "matchPackageNames": [
         "ts-jest",
         "@nestjs/testing"
-      ]
+      ],
+      "enabled": false
     },
     {
       "groupName": "types",
