@@ -51,7 +51,7 @@
   "ignoreDeps": [
     "node",
     "typescript",
-
+    "vue-tsc",
     "husky",
     "rimraf",
     "chalk",
