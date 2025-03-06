@@ -15,6 +15,6 @@
   "devDependencies": {
     "bumpp": "^10.0.3",
     "prettier": "3.2.4",
-    "renovate": "^37.425.1"
+    "renovate": "^39.190.0"
   }
 }
