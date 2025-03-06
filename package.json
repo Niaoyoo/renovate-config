@@ -1,16 +1,19 @@
 {
   "name": "@niaoyoo/renovate-config",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Presets for Open Source Libraries",
   "license": "MIT",
   "scripts": {
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "release": " bumpp -r -x \"pnpm run changelog\" --all",
     "test": "renovate-config-validator ./default.json"
   },
   "files": [
     "default.json"
   ],
   "devDependencies": {
+    "bumpp": "^10.0.3",
     "prettier": "3.2.4",
     "renovate": "^37.425.1"
   }
