@@ -54,6 +54,7 @@
     "typescript",
     "vue-tsc",
     "dotenv",
+    "nanoid",
     "husky",
     "rimraf"
   ],
