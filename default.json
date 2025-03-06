@@ -52,12 +52,9 @@
     "node",
     "typescript",
     "vue-tsc",
+    "dotenv",
     "husky",
-    "rimraf",
-    "chalk",
-    "prompts",
-    "semver",
-    "execa"
+    "rimraf"
   ],
   "postUpdateOptions": [
     "pnpmDedupe"
