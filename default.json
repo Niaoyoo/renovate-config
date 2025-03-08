@@ -14,28 +14,19 @@
       "enabled": false
     },
     {
-      "groupName": "test",
-      "matchPackageNames": [
-        "ts-jest",
-        "@nestjs/testing"
-      ],
-      "enabled": false
+      "matchPackageNames": ["@iconify/json"],
+      "matchPackagePatterns": ["^@iconify/"],
+      "groupName": "iconify"
     },
-    {
-      "groupName": "types",
-      "matchPackagePrefixes": [
-        "@types"
-      ]
-    },
+    { "groupName": "test", "matchPackageNames": [ "ts-jest", "@nestjs/testing" ], "enabled": false },
+    { "groupName": "types", "matchPackageNames": ["@types{/,}**"] },
     {
       "groupName": "ESLint group",
       "matchPackageNames": [
         "eslint",
         "lint-staged",
-        "@antfu/eslint-config"
-      ],
-      "matchPackagePrefixes": [
-        "eslint"
+        "@antfu/eslint-config",
+        "eslint{/,}**"
       ]
     },
     {
