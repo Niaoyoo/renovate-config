@@ -12,6 +12,8 @@
     "default.json"
   ],
   "devDependencies": {
+    "@antfu/eslint-config": "^4.8.1",
+    "eslint": "^9.22.0",
     "renovate": "latest"
   }
 }

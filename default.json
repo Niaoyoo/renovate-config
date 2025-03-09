@@ -6,8 +6,8 @@
   "ignoreScripts": true,
   "labels": ["dependencies", "renovate"],
   "timezone": "Asia/Shanghai",
-  "prConcurrentLimit": 5,
   "rangeStrategy": "bump",
+  "schedule": ["after 10pm every weekday", "before 5am every weekday"],
   "packageRules": [
     {
       "depTypeList": ["peerDependencies"],
