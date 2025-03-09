@@ -18,7 +18,7 @@
       "matchPackagePatterns": ["^@iconify/"],
       "groupName": "iconify"
     },
-    { "groupName": "test", "matchPackageNames": [ "ts-jest", "@nestjs/testing" ], "enabled": false },
+    { "groupName": "Test group", "matchPackageNames": [ "ts-jest", "@nestjs/testing","vitest","happy-dom" ], "enabled": false },
     { "groupName": "types", "matchPackageNames": ["@types{/,}**"] },
     {
       "groupName": "ESLint group",
@@ -26,6 +26,7 @@
         "eslint",
         "lint-staged",
         "@antfu/eslint-config",
+        "@nuxt/eslint",
         "eslint{/,}**"
       ]
     },
