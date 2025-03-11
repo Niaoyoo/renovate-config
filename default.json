@@ -7,10 +7,7 @@
   "rangeStrategy": "bump",
   "schedule": ["after 10pm every weekday", "before 5am every weekday"],
   "packageRules": [
-    {
-      "depTypeList": ["peerDependencies"],
-      "enabled": false
-    },
+    { "depTypeList": ["peerDependencies"], "enabled": false },
     {
       "matchPackageNames": ["@iconify/json"],
       "matchPackagePatterns": ["^@iconify/"],
@@ -21,7 +18,7 @@
       "matchPackageNames": ["ts-jest", "@nestjs/testing", "vitest", "happy-dom"],
       "matchPackagePatterns": ["^@vitest/"]
     },
-    { "groupName": "types", "matchPackageNames": ["@types{/,}**"] },
+    { "groupName": "Types group", "matchPackageNames": ["@types{/,}**"] },
     {
       "groupName": "ESLint group",
       "matchPackageNames": [
