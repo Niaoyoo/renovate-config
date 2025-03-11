@@ -1,8 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base"
-  ],
+  "extends": ["config:base"],
   "ignoreScripts": true,
   "labels": ["dependencies", "renovate"],
   "timezone": "Asia/Shanghai",
@@ -18,7 +16,11 @@
       "matchPackagePatterns": ["^@iconify/"],
       "groupName": "iconify"
     },
-    { "groupName": "Test group", "matchPackageNames": [ "ts-jest", "@nestjs/testing","vitest","happy-dom" ], "enabled": false },
+    {
+      "groupName": "Test group",
+      "matchPackageNames": ["ts-jest", "@nestjs/testing", "vitest", "happy-dom"],
+      "matchPackagePatterns": ["^@vitest/"]
+    },
     { "groupName": "types", "matchPackageNames": ["@types{/,}**"] },
     {
       "groupName": "ESLint group",

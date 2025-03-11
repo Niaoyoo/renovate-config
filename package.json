@@ -1,16 +1,18 @@
 {
   "name": "@niaoyoo/renovate-config",
-  "private": true,
+  "type": "module",
   "version": "0.0.1",
+  "private": true,
   "description": "Presets for Open Source Libraries",
   "license": "MIT",
-  "scripts": {
-    "validate": "pnpm exec renovate-config-validator",
-    "test": "renovate-config-validator ./default.json"
-  },
   "files": [
     "default.json"
   ],
+  "scripts": {
+    "validate": "pnpm exec renovate-config-validator",
+    "lint": "eslint .",
+    "test": "renovate-config-validator ./default.json"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^4.8.1",
     "eslint": "^9.22.0",
