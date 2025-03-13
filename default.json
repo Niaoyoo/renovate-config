@@ -9,8 +9,7 @@
   "packageRules": [
     { "depTypeList": ["peerDependencies"], "enabled": false },
     {
-      "matchPackageNames": ["@iconify/json"],
-      "matchPackagePatterns": ["^@iconify/"],
+      "matchPackagePatterns": ["^@iconify-json/"],
       "groupName": "iconify"
     },
     {
