@@ -1,0 +1,38 @@
+name: Renovate Config Validator
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    paths:
+      - '**/*.json'
+      - '**/*.json5'
+
+jobs:
+  renovate-config-validator:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install the Renovate CLI
+        run: pnpm install -g renovate
+
+      - name: Validate all renovate configs (exclude package.json)
+        run: |
+          find . -type f \( -name "*.json" -o -name "*.json5" \) \
+            ! -name "package.json" \
+            ! -name "settings.json" | while IFS= read -r file; do
+              echo "🔍 Validating $file"
+              RENOVATE_CONFIG_FILE="$file" renovate-config-validator
+          done
