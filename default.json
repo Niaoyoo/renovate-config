@@ -7,21 +7,13 @@
   "rangeStrategy": "bump",
   "schedule": ["after 10pm every weekday", "before 5am every weekday"],
   "packageRules": [
-    { "depTypeList": ["peerDependencies"], "enabled": false },
-    {
-      "matchPackagePatterns": ["^@iconify-json/"],
-      "groupName": "iconify"
-    },
+    { "matchDepTypes": ["peerDependencies"], "enabled": false },
+    { "groupName": "iconify", "matchPackageNames": ["/^@iconify-json//"] },
     {
       "groupName": "Test group",
-      "matchPackageNames": ["ts-jest", "vitest", "happy-dom"],
-      "matchPackagePatterns": ["^@vitest/"]
+      "matchPackageNames": ["ts-jest", "vitest", "happy-dom", "/^@vitest//"]
     },
-    {
-      "groupName": "Types group",
-      "matchPackageNames": ["@types{/,}**"]
-    },
-
+    { "groupName": "Types group", "matchPackageNames": ["@types{/,}**"] },
     {
       "groupName": "ESLint group",
       "matchPackageNames": [
@@ -34,8 +26,7 @@
     },
     {
       "groupName": "nuxt plugins",
-      "matchPackageNames": ["@nuxtjs/"],
-      "matchPackagePrefixes": ["@nuxtjs/"]
+      "matchPackageNames": ["@nuxtjs/{/,}**"]
     },
     {
       "matchPackageNames": ["pnpm"],
@@ -43,11 +34,7 @@
       "rangeStrategy": "pin"
     }
   ],
-  "ignorePaths": [
-    ".nvmrc",
-    ".node-version",
-    "packageManager"
-  ],
+  "ignorePaths": [".nvmrc", ".node-version", "packageManager"],
   "ignoreDeps": [
     "node",
     "typescript",
@@ -57,7 +44,5 @@
     "husky",
     "rimraf"
   ],
-  "postUpdateOptions": [
-    "pnpmDedupe"
-  ]
+  "postUpdateOptions": ["pnpmDedupe"]
 }
