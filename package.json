@@ -1,7 +1,7 @@
 {
   "name": "@niaoyoo/renovate-config",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "private": true,
   "description": "Presets for Open Source Libraries",
   "license": "MIT",
@@ -10,11 +10,15 @@
   ],
   "scripts": {
     "validate": "pnpm exec renovate-config-validator",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "release": "pnpm lint && bumpp -r -x \"pnpm run changelog\" --all",
     "lint": "eslint .",
     "test": "renovate-config-validator ./default.json"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.8.1",
+    "bumpp": "^10.1.0",
+    "conventional-changelog-cli": "^5.0.0",
     "eslint": "^9.22.0",
     "renovate": "latest"
   }
