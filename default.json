@@ -17,7 +17,14 @@
       "matchPackageNames": ["ts-jest", "@nestjs/testing", "vitest", "happy-dom"],
       "matchPackagePatterns": ["^@vitest/"]
     },
-    { "groupName": "Types group", "matchPackageNames": ["@types{/,}**"] },
+    {
+      "groupName": "Types group",
+      "matchPackageNames": ["@types{/,}**"]
+    },
+    {
+      "groupName": "NestJs group",
+      "matchPackageNames": ["@nestjs{/,}**", "nestjs-cls"]
+    },
     {
       "groupName": "ESLint group",
       "matchPackageNames": [
