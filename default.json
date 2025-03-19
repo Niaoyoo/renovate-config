@@ -14,17 +14,14 @@
     },
     {
       "groupName": "Test group",
-      "matchPackageNames": ["ts-jest", "@nestjs/testing", "vitest", "happy-dom"],
+      "matchPackageNames": ["ts-jest", "vitest", "happy-dom"],
       "matchPackagePatterns": ["^@vitest/"]
     },
     {
       "groupName": "Types group",
       "matchPackageNames": ["@types{/,}**"]
     },
-    {
-      "groupName": "NestJs group",
-      "matchPackageNames": ["@nestjs{/,}**", "nestjs-cls"]
-    },
+
     {
       "groupName": "ESLint group",
       "matchPackageNames": [

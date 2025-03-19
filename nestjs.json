@@ -1,0 +1,8 @@
+{
+  "packageRules": [
+    {
+      "groupName": "NestJs group",
+      "matchPackageNames": ["@nestjs{/,}**", "nestjs-cls", "@nestjs/testing"]
+    }
+  ]
+}
