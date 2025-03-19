@@ -1,0 +1,19 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Deps that are noisy and don't need to be automatically maintained",
+  "ignorePaths": [".nvmrc", ".node-version", "packageManager"],
+  "ignoreDeps": [
+    "@types/jsdom",
+    "@types/node",
+    "@types/semver",
+    "node",
+    "semver",
+    "typescript",
+    "vue-tsc",
+    "dotenv",
+    "nanoid",
+    "jsdom",
+    "husky",
+    "rimraf"
+  ]
+}

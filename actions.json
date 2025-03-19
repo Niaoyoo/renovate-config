@@ -1,0 +1,11 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "github actions and runner updates",
+  "packageRules": [
+    {
+      "groupName": "github-actions",
+      "matchManagers": "github-actions",
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"]
+    }
+  ]
+}

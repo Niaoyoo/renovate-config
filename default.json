@@ -1,0 +1,41 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "local>niaoyoo/renovate-config:ignore"
+  ],
+  "ignoreScripts": true,
+  "labels": ["dependencies", "renovate"],
+  "timezone": "Asia/Shanghai",
+  "rangeStrategy": "bump",
+  "schedule": ["after 10pm every weekday", "before 5am every weekday"],
+  "packageRules": [
+    { "matchDepTypes": ["peerDependencies"], "enabled": false },
+    { "groupName": "iconify", "matchPackageNames": ["/^@iconify-json//"] },
+    {
+      "groupName": "Test group",
+      "matchPackageNames": ["ts-jest", "vitest", "happy-dom", "/^@vitest//"]
+    },
+    { "groupName": "Types group", "matchPackageNames": ["@types{/,}**"] },
+    {
+      "groupName": "ESLint group",
+      "matchPackageNames": [
+        "eslint",
+        "lint-staged",
+        "@antfu/eslint-config",
+        "@nuxt/eslint",
+        "eslint{/,}**"
+      ]
+    },
+    {
+      "groupName": "nuxt plugins",
+      "matchPackageNames": ["@nuxtjs/{/,}**"]
+    },
+    {
+      "matchPackageNames": ["pnpm"],
+      "allowedVersions": "9.15.4",
+      "rangeStrategy": "pin"
+    }
+  ],
+  "postUpdateOptions": ["pnpmDedupe"]
+}
