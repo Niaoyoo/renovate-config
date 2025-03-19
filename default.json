@@ -1,6 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base"],
+  "extends": [
+    "config:base",
+    "local>niaoyoo/renovate-config:ignore"
+  ],
   "ignoreScripts": true,
   "labels": ["dependencies", "renovate"],
   "timezone": "Asia/Shanghai",
@@ -33,16 +36,6 @@
       "allowedVersions": "9.15.4",
       "rangeStrategy": "pin"
     }
-  ],
-  "ignorePaths": [".nvmrc", ".node-version", "packageManager"],
-  "ignoreDeps": [
-    "node",
-    "typescript",
-    "vue-tsc",
-    "dotenv",
-    "nanoid",
-    "husky",
-    "rimraf"
   ],
   "postUpdateOptions": ["pnpmDedupe"]
 }
