@@ -29,6 +29,11 @@
       ]
     },
     {
+      "groupName": "nuxt plugins",
+      "matchPackageNames": ["@nuxtjs/"],
+      "matchPackagePrefixes": ["@nuxtjs/"]
+    },
+    {
       "matchPackageNames": ["pnpm"],
       "allowedVersions": "9.15.4",
       "rangeStrategy": "pin"
