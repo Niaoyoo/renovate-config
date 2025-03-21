@@ -14,8 +14,7 @@
         "reflect-metadata",
         "!@nestjs/swagger",
         "!@nestjs/testing"
-      ],
-      "labels": ["nestjs"]
+      ]
     }
   ]
 }

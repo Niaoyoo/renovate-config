@@ -13,8 +13,7 @@
     { "matchDepTypes": ["peerDependencies"], "enabled": false },
     {
       "groupName": "iconify",
-      "matchPackageNames": ["^@iconify-json"],
-      "labels": ["iconify"]
+      "matchPackageNames": ["^@iconify-json"]
     },
     {
       "groupName": "Testing Group",
@@ -26,13 +25,11 @@
         "jest",
         "supertest",
         "@types/jest"
-      ],
-      "labels": ["Testing"]
+      ]
     },
     {
       "groupName": "Types Group",
-      "matchPackageNames": ["^@types"],
-      "labels": ["Types"]
+      "matchPackageNames": ["^@types"]
     },
     {
       "groupName": "ESLint Group",
@@ -42,13 +39,11 @@
         "@antfu/eslint-config",
         "@nuxt/eslint",
         "@typescript-eslint"
-      ],
-      "labels": ["ESLint"]
+      ]
     },
     {
       "groupName": "NuxtJs Group",
-      "matchPackageNames": ["^@nuxtjs"],
-      "labels": ["NuxtJs"]
+      "matchPackageNames": ["^@nuxtjs"]
     },
     {
       "matchPackageNames": ["pnpm"],
