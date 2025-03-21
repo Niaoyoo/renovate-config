@@ -11,14 +11,14 @@
   "schedule": ["after 10pm every weekday", "before 5am every weekday"],
   "packageRules": [
     { "matchDepTypes": ["peerDependencies"], "enabled": false },
-    { "groupName": "iconify", "matchPackageNames": ["/^@iconify-json//"] },
+    { "groupName": "iconify", "matchPackageNames": ["^@iconify-json"] },
     {
-      "groupName": "Test group",
-      "matchPackageNames": ["ts-jest", "vitest", "happy-dom", "/^@vitest//"]
+      "groupName": "Test Group",
+      "matchPackageNames": ["ts-jest", "vitest", "happy-dom", "^@vitest"]
     },
-    { "groupName": "Types group", "matchPackageNames": ["@types{/,}**"] },
+    { "groupName": "Types Group", "matchPackageNames": ["^@types"] },
     {
-      "groupName": "ESLint group",
+      "groupName": "ESLint Group",
       "matchPackageNames": [
         "eslint",
         "lint-staged",
@@ -28,8 +28,8 @@
       ]
     },
     {
-      "groupName": "nuxt plugins",
-      "matchPackageNames": ["@nuxtjs/{/,}**"]
+      "groupName": "NuxtJs Group",
+      "matchPackageNames": ["^@nuxtjs"]
     },
     {
       "matchPackageNames": ["pnpm"],
