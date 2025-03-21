@@ -11,12 +11,29 @@
   "schedule": ["after 10pm every weekday", "before 5am every weekday"],
   "packageRules": [
     { "matchDepTypes": ["peerDependencies"], "enabled": false },
-    { "groupName": "iconify", "matchPackageNames": ["^@iconify-json"] },
     {
-      "groupName": "Test Group",
-      "matchPackageNames": ["ts-jest", "vitest", "happy-dom", "^@vitest"]
+      "groupName": "iconify",
+      "matchPackageNames": ["^@iconify-json"],
+      "labels": ["iconify"]
     },
-    { "groupName": "Types Group", "matchPackageNames": ["^@types"] },
+    {
+      "groupName": "Testing Group",
+      "matchPackageNames": [
+        "ts-jest",
+        "vitest",
+        "happy-dom",
+        "^@vitest",
+        "jest",
+        "supertest",
+        "@types/jest"
+      ],
+      "labels": ["Testing"]
+    },
+    {
+      "groupName": "Types Group",
+      "matchPackageNames": ["^@types"],
+      "labels": ["Types"]
+    },
     {
       "groupName": "ESLint Group",
       "matchPackageNames": [
@@ -24,12 +41,14 @@
         "lint-staged",
         "@antfu/eslint-config",
         "@nuxt/eslint",
-        "eslint{/,}**"
-      ]
+        "@typescript-eslint"
+      ],
+      "labels": ["ESLint"]
     },
     {
       "groupName": "NuxtJs Group",
-      "matchPackageNames": ["^@nuxtjs"]
+      "matchPackageNames": ["^@nuxtjs"],
+      "labels": ["NuxtJs"]
     },
     {
       "matchPackageNames": ["pnpm"],

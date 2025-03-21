@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "packageRules": [
     {
-      "groupName": "@nestjs Group",
+      "groupName": "NestJs Group",
       "matchPackageNames": [
         "@nestjs",
         "@fastify",
@@ -12,8 +12,10 @@
         "nest-winston",
         "rxjs",
         "reflect-metadata",
-        "!@nestjs/swagger"
-      ]
+        "!@nestjs/swagger",
+        "!@nestjs/testing"
+      ],
+      "labels": ["nestjs"]
     }
   ]
 }
